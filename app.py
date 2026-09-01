@@ -101,7 +101,7 @@ with st.sidebar:
     st.markdown("---")
 
     st.caption(
-        "Built with Streamlit, XGBoost, Groq and Llama 3.1"
+        "Built with Streamlit, XGBoost, Groq and GPT-OSS"
     )
 
 # ===================================================
@@ -299,7 +299,7 @@ Output:
 Powered by:
 
 - Groq API
-- Llama 3.1
+- GPT-OSS (open-weight LLM)
 - Streamlit Chat Interface
 
 Capabilities:
@@ -318,7 +318,7 @@ Capabilities:
 - XGBoost
 - Streamlit
 - Groq API
-- Llama 3.1
+- GPT-OSS (open-weight LLM)
 - Joblib
 
 ---
