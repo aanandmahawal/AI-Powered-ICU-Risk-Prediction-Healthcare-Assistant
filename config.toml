@@ -1,0 +1,12 @@
+# Locks the app to a light clinical theme so colors never depend on the
+# visitor's browser / OS dark-mode setting. Streamlit Cloud reads this file too.
+[theme]
+base = "light"
+primaryColor = "#0e7490"            # teal accent: buttons, active nav, focus rings
+backgroundColor = "#f4f8fb"         # page
+secondaryBackgroundColor = "#e6eef5" # sidebar, inputs, chat input
+textColor = "#0f172a"               # near-black slate
+font = "sans serif"
+
+[server]
+headless = true
