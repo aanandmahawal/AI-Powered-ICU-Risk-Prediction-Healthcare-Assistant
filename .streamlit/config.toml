@@ -10,3 +10,6 @@ font = "sans serif"
 
 [server]
 headless = true
+
+# Largest file (MB) accepted for medical reports and patient lists.
+maxUploadSize = 20
