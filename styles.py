@@ -43,14 +43,17 @@ def load_css():
        ========================================================= */
     #MainMenu { visibility: hidden; }
     footer    { visibility: hidden; }
-    header[data-testid="stHeader"] { background: rgba(244,248,251,0.92); }
+    /* Streamlit's top bar (Deploy / Fork / GitHub buttons, ~3.75rem tall) floats over the page.
+       Solid, so content scrolling underneath is hidden cleanly instead of showing through. */
+    header[data-testid="stHeader"] { background: #f4f8fb; border-bottom: 1px solid #e2e8f0; }
     header[data-testid="stHeader"] * { color: #0f172a; }
 
     .stApp {
         background: linear-gradient(160deg, #f7fafc 0%, #eef5fa 100%);
         color: #0f172a;
     }
-    .block-container { padding-top: 1.5rem; padding-bottom: 5rem; }
+    /* Content starts below the top bar, so the page title is never covered by it */
+    .block-container { padding-top: 4.75rem; padding-bottom: 5rem; }
 
     [data-testid="stBottom"], [data-testid="stBottom"] > div,
     [data-testid="stBottomBlockContainer"] {
@@ -301,7 +304,7 @@ def load_css():
        9. Assistant panel (right column, stays in view while the page scrolls)
        ========================================================= */
     [data-testid="stColumn"]:has(.st-key-chat_panel) {
-        position: sticky; top: 3.75rem; align-self: flex-start;
+        position: sticky; top: 4.5rem; align-self: flex-start;   /* stays just below the top bar */
         min-width: min(270px, 100%);   /* room for the name and all three header buttons */
     }
     .st-key-chat_panel {
